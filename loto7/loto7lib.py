@@ -266,3 +266,11 @@ def pearson(a: list[float], b: list[float]) -> float:
     va = sum((x - ma) ** 2 for x in a)
     vb = sum((y - mb) ** 2 for y in b)
     return cov / math.sqrt(va * vb) if va and vb else 0.0
+
+
+def fmt_small_pct(p: float) -> str:
+    """小さい確率でも有効数字3桁が見えるように % 表記する (例: 0.00000971%)。"""
+    if p <= 0:
+        return "0%"
+    digits = max(2, 2 - math.floor(math.log10(p * 100)))
+    return f"{p * 100:.{digits}f}%"

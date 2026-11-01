@@ -41,12 +41,13 @@ def _pattern_ok(c: tuple[int, ...], past: set[tuple[int, ...]]) -> bool:
     return True
 
 
-def generate(n: int, model: PopularityModel, past: set, rng: random.Random, mode: str = "unpopular"):
+def generate(n: int, model: PopularityModel, past: set, rng: random.Random, mode: str = "unpopular",
+             pool: int = POOL):
     if mode == "random":
         return [tuple(sorted(rng.sample(range(1, N_NUM + 1), PICK))) for _ in range(n)]
 
     cands = set()
-    while len(cands) < POOL:
+    while len(cands) < pool:
         c = tuple(sorted(rng.sample(range(1, N_NUM + 1), PICK)))
         if _pattern_ok(c, past):
             cands.add(c)
