@@ -1,0 +1,23 @@
+{
+  "_comment": "これを config.json にコピーして root を自分のPCのパスに書き換える。パスの \\ は \\\\ と2つ重ねる。",
+  "channel_name": "負けの研究室",
+  "note_url": "",
+  "start_date": "2026-09-07",
+  "output_dir": "weekly_out",
+  "sources": [
+    {
+      "type": "local_set01",
+      "root": "C:\\Users\\PC\\Documents\\Codex\\2026-09-07\\referenced-chatgpt-conversation-this-is-an-10\\outputs\\Local_Prospective",
+      "market": "Local",
+      "system": "Local Set01 / CONTROL v0"
+    },
+    {
+      "type": "capital",
+      "root": "C:\\Users\\PC\\Documents\\Codex\\2026-09-07\\referenced-chatgpt-conversation-this-is-an-16\\outputs\\Capital_Level"
+    },
+    {
+      "type": "normalized",
+      "dir": "my_data"
+    }
+  ]
+}

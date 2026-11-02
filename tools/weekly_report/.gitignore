@@ -1,0 +1,6 @@
+# 本番の設定・自分のデータ・出力はコミットしない
+config.json
+my_data/
+weekly_out/
+logs/
+__pycache__/

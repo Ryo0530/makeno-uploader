@@ -1,0 +1,168 @@
+{
+ "_synthetic": "テスト用の架空データ。実績ではありません",
+ "date": "2026-10-24",
+ "model": "Local_CONTROL_v0.0.0",
+ "races": [
+  {
+   "race_id": "20261024-船橋-06R",
+   "venue": "船橋",
+   "gate": "CORE",
+   "status": "SETTLED",
+   "investment": 2000,
+   "payout": 0,
+   "trifecta_payout": 10140,
+   "primary_failure": "theory",
+   "missed_roles": [
+    "THIRD",
+    "SECOND"
+   ]
+  },
+  {
+   "race_id": "20261024-船橋-07R",
+   "venue": "船橋",
+   "gate": "WATCH_CHAOS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 6480,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "SECOND",
+    "HEAD"
+   ]
+  },
+  {
+   "race_id": "20261024-船橋-08R",
+   "venue": "船橋",
+   "gate": "CORE",
+   "status": "SETTLED",
+   "investment": 2700,
+   "payout": 0,
+   "trifecta_payout": 4860,
+   "primary_failure": "compression",
+   "missed_roles": [
+    "SECOND",
+    "THIRD"
+   ]
+  },
+  {
+   "race_id": "20261024-船橋-09R",
+   "venue": "船橋",
+   "gate": "CORE",
+   "status": "SETTLED",
+   "investment": 6000,
+   "payout": 0,
+   "trifecta_payout": 42010,
+   "primary_failure": "role",
+   "missed_roles": [
+    "SECOND",
+    "HEAD"
+   ]
+  },
+  {
+   "race_id": "20261024-船橋-10R",
+   "venue": "船橋",
+   "gate": "CORE",
+   "status": "SETTLED",
+   "investment": 3300,
+   "payout": 0,
+   "trifecta_payout": 3460,
+   "primary_failure": "role",
+   "missed_roles": [
+    "THIRD",
+    "SECOND"
+   ]
+  },
+  {
+   "race_id": "20261024-船橋-11R",
+   "venue": "船橋",
+   "gate": "WATCH_NEAR",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 3990,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "SECOND",
+    "THIRD"
+   ]
+  },
+  {
+   "race_id": "20261024-浦和-06R",
+   "venue": "浦和",
+   "gate": "WATCH_CHAOS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 46630,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "HEAD",
+    "SECOND"
+   ]
+  },
+  {
+   "race_id": "20261024-浦和-07R",
+   "venue": "浦和",
+   "gate": "PASS",
+   "status": "HELD",
+   "investment": 0,
+   "payout": null,
+   "trifecta_payout": null,
+   "primary_failure": null,
+   "missed_roles": []
+  },
+  {
+   "race_id": "20261024-浦和-08R",
+   "venue": "浦和",
+   "gate": "WATCH_NEAR",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 3690,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "THIRD",
+    "SECOND"
+   ]
+  },
+  {
+   "race_id": "20261024-浦和-09R",
+   "venue": "浦和",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 32520,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "HEAD"
+   ]
+  },
+  {
+   "race_id": "20261024-浦和-10R",
+   "venue": "浦和",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 120890,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "THIRD",
+    "SECOND"
+   ]
+  },
+  {
+   "race_id": "20261024-浦和-11R",
+   "venue": "浦和",
+   "gate": "PASS",
+   "status": "EXCLUDED",
+   "investment": 0,
+   "payout": null,
+   "trifecta_payout": null,
+   "primary_failure": null,
+   "missed_roles": []
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+  "_comment": "サンプルデータ（架空）で動作確認するための設定。本番は config.example.json をコピーして使う。",
+  "channel_name": "負けの研究室",
+  "note_url": "",
+  "start_date": "2026-10-19",
+  "output_dir": "weekly_out",
+  "sources": [
+    {"type": "local_set01", "root": "sample_data/Local_Prospective", "market": "Local", "system": "Local Set01 / CONTROL v0"},
+    {"type": "capital", "root": "sample_data/Capital_Level"},
+    {"type": "normalized", "dir": "sample_data/normalized"}
+  ]
+}

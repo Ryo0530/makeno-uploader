@@ -1,0 +1,170 @@
+{
+ "_synthetic": "テスト用の架空データ。実績ではありません",
+ "date": "2026-11-01",
+ "model": "Local_CONTROL_v0.0.0",
+ "races": [
+  {
+   "race_id": "20261101-大井-06R",
+   "venue": "大井",
+   "gate": "WATCH_NEAR",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 37040,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "HEAD",
+    "SECOND"
+   ]
+  },
+  {
+   "race_id": "20261101-大井-07R",
+   "venue": "大井",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 6120,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "THIRD",
+    "SECOND"
+   ]
+  },
+  {
+   "race_id": "20261101-大井-08R",
+   "venue": "大井",
+   "gate": "CORE",
+   "status": "SETTLED",
+   "investment": 3700,
+   "payout": 0,
+   "trifecta_payout": 11220,
+   "primary_failure": "compression",
+   "missed_roles": [
+    "SECOND"
+   ]
+  },
+  {
+   "race_id": "20261101-大井-09R",
+   "venue": "大井",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 7840,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "HEAD",
+    "SECOND"
+   ]
+  },
+  {
+   "race_id": "20261101-大井-10R",
+   "venue": "大井",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 3270,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "THIRD",
+    "HEAD"
+   ]
+  },
+  {
+   "race_id": "20261101-大井-11R",
+   "venue": "大井",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 22000,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "SECOND"
+   ]
+  },
+  {
+   "race_id": "20261101-笠松-06R",
+   "venue": "笠松",
+   "gate": "WATCH_NEAR",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 44880,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "THIRD",
+    "HEAD"
+   ]
+  },
+  {
+   "race_id": "20261101-笠松-07R",
+   "venue": "笠松",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 4270,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "THIRD",
+    "HEAD"
+   ]
+  },
+  {
+   "race_id": "20261101-笠松-08R",
+   "venue": "笠松",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 21670,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "SECOND",
+    "HEAD"
+   ]
+  },
+  {
+   "race_id": "20261101-笠松-09R",
+   "venue": "笠松",
+   "gate": "CORE",
+   "status": "SETTLED",
+   "investment": 3000,
+   "payout": 0,
+   "trifecta_payout": 57460,
+   "primary_failure": "role",
+   "missed_roles": [
+    "HEAD",
+    "THIRD"
+   ]
+  },
+  {
+   "race_id": "20261101-笠松-10R",
+   "venue": "笠松",
+   "gate": "CORE",
+   "status": "SETTLED",
+   "investment": 3400,
+   "payout": 5090,
+   "trifecta_payout": 5090,
+   "primary_failure": null,
+   "missed_roles": []
+  },
+  {
+   "race_id": "20261101-笠松-11R",
+   "venue": "笠松",
+   "gate": "WATCH_NEAR",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 2330,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "HEAD",
+    "THIRD"
+   ]
+  }
+ ]
+}

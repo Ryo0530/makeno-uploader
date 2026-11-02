@@ -1,0 +1,169 @@
+{
+ "_synthetic": "テスト用の架空データ。実績ではありません",
+ "date": "2026-10-27",
+ "model": "Local_CONTROL_v0.0.0",
+ "races": [
+  {
+   "race_id": "20261027-大井-06R",
+   "venue": "大井",
+   "gate": "CORE",
+   "status": "SETTLED",
+   "investment": 2600,
+   "payout": 11000,
+   "trifecta_payout": 11000,
+   "primary_failure": null,
+   "missed_roles": []
+  },
+  {
+   "race_id": "20261027-大井-07R",
+   "venue": "大井",
+   "gate": "CORE",
+   "status": "SETTLED",
+   "investment": 2100,
+   "payout": 0,
+   "trifecta_payout": 7230,
+   "primary_failure": "compression",
+   "missed_roles": [
+    "SECOND",
+    "THIRD"
+   ]
+  },
+  {
+   "race_id": "20261027-大井-08R",
+   "venue": "大井",
+   "gate": "CORE",
+   "status": "SETTLED",
+   "investment": 3600,
+   "payout": 0,
+   "trifecta_payout": 2290,
+   "primary_failure": "role",
+   "missed_roles": [
+    "SECOND",
+    "HEAD"
+   ]
+  },
+  {
+   "race_id": "20261027-大井-09R",
+   "venue": "大井",
+   "gate": "WATCH_NEAR",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 84570,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "THIRD",
+    "HEAD"
+   ]
+  },
+  {
+   "race_id": "20261027-大井-10R",
+   "venue": "大井",
+   "gate": "WATCH_CHAOS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 91760,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "SECOND",
+    "HEAD"
+   ]
+  },
+  {
+   "race_id": "20261027-大井-11R",
+   "venue": "大井",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 20910,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "SECOND",
+    "THIRD"
+   ]
+  },
+  {
+   "race_id": "20261027-船橋-06R",
+   "venue": "船橋",
+   "gate": "WATCH_NEAR",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 6910,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "SECOND",
+    "THIRD"
+   ]
+  },
+  {
+   "race_id": "20261027-船橋-07R",
+   "venue": "船橋",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 4610,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "THIRD"
+   ]
+  },
+  {
+   "race_id": "20261027-船橋-08R",
+   "venue": "船橋",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 34950,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "HEAD"
+   ]
+  },
+  {
+   "race_id": "20261027-船橋-09R",
+   "venue": "船橋",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 4810,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "SECOND",
+    "THIRD"
+   ]
+  },
+  {
+   "race_id": "20261027-船橋-10R",
+   "venue": "船橋",
+   "gate": "CORE",
+   "status": "SETTLED",
+   "investment": 5500,
+   "payout": 0,
+   "trifecta_payout": 15340,
+   "primary_failure": "theory",
+   "missed_roles": [
+    "HEAD"
+   ]
+  },
+  {
+   "race_id": "20261027-船橋-11R",
+   "venue": "船橋",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 113860,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "THIRD",
+    "SECOND"
+   ]
+  }
+ ]
+}

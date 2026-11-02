@@ -1,0 +1,169 @@
+{
+ "_synthetic": "テスト用の架空データ。実績ではありません",
+ "date": "2026-10-30",
+ "model": "Local_CONTROL_v0.0.0",
+ "races": [
+  {
+   "race_id": "20261030-高知-06R",
+   "venue": "高知",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 15770,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "THIRD"
+   ]
+  },
+  {
+   "race_id": "20261030-高知-07R",
+   "venue": "高知",
+   "gate": "WATCH_CHAOS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 13550,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "HEAD"
+   ]
+  },
+  {
+   "race_id": "20261030-高知-08R",
+   "venue": "高知",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 1100,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "THIRD"
+   ]
+  },
+  {
+   "race_id": "20261030-高知-09R",
+   "venue": "高知",
+   "gate": "WATCH_NEAR",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 1910,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "THIRD",
+    "HEAD"
+   ]
+  },
+  {
+   "race_id": "20261030-高知-10R",
+   "venue": "高知",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 24770,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "HEAD",
+    "SECOND"
+   ]
+  },
+  {
+   "race_id": "20261030-高知-11R",
+   "venue": "高知",
+   "gate": "CORE",
+   "status": "SETTLED",
+   "investment": 1900,
+   "payout": 0,
+   "trifecta_payout": 46120,
+   "primary_failure": "theory",
+   "missed_roles": [
+    "SECOND",
+    "THIRD"
+   ]
+  },
+  {
+   "race_id": "20261030-名古屋-06R",
+   "venue": "名古屋",
+   "gate": "WATCH_NEAR",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 7530,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "SECOND",
+    "HEAD"
+   ]
+  },
+  {
+   "race_id": "20261030-名古屋-07R",
+   "venue": "名古屋",
+   "gate": "WATCH_NEAR",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 9070,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "SECOND"
+   ]
+  },
+  {
+   "race_id": "20261030-名古屋-08R",
+   "venue": "名古屋",
+   "gate": "WATCH_CHAOS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 2170,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "THIRD"
+   ]
+  },
+  {
+   "race_id": "20261030-名古屋-09R",
+   "venue": "名古屋",
+   "gate": "CORE",
+   "status": "SETTLED",
+   "investment": 4600,
+   "payout": 0,
+   "trifecta_payout": 5620,
+   "primary_failure": "role",
+   "missed_roles": [
+    "HEAD"
+   ]
+  },
+  {
+   "race_id": "20261030-名古屋-10R",
+   "venue": "名古屋",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 1330,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "HEAD",
+    "SECOND"
+   ]
+  },
+  {
+   "race_id": "20261030-名古屋-11R",
+   "venue": "名古屋",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 2660,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "HEAD",
+    "SECOND"
+   ]
+  }
+ ]
+}

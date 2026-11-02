@@ -1,0 +1,165 @@
+{
+ "_synthetic": "テスト用の架空データ。実績ではありません",
+ "date": "2026-10-26",
+ "model": "Local_CONTROL_v0.0.0",
+ "races": [
+  {
+   "race_id": "20261026-浦和-06R",
+   "venue": "浦和",
+   "gate": "CORE",
+   "status": "SETTLED",
+   "investment": 3400,
+   "payout": 0,
+   "trifecta_payout": 113410,
+   "primary_failure": "theory",
+   "missed_roles": [
+    "HEAD",
+    "SECOND"
+   ]
+  },
+  {
+   "race_id": "20261026-浦和-07R",
+   "venue": "浦和",
+   "gate": "CORE",
+   "status": "SETTLED",
+   "investment": 3800,
+   "payout": 0,
+   "trifecta_payout": 8790,
+   "primary_failure": "theory",
+   "missed_roles": [
+    "THIRD"
+   ]
+  },
+  {
+   "race_id": "20261026-浦和-08R",
+   "venue": "浦和",
+   "gate": "CORE",
+   "status": "SETTLED",
+   "investment": 3300,
+   "payout": 0,
+   "trifecta_payout": 1890,
+   "primary_failure": "theory",
+   "missed_roles": [
+    "HEAD",
+    "SECOND"
+   ]
+  },
+  {
+   "race_id": "20261026-浦和-09R",
+   "venue": "浦和",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 68620,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "HEAD"
+   ]
+  },
+  {
+   "race_id": "20261026-浦和-10R",
+   "venue": "浦和",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 720,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "HEAD",
+    "THIRD"
+   ]
+  },
+  {
+   "race_id": "20261026-浦和-11R",
+   "venue": "浦和",
+   "gate": "WATCH_NEAR",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 25180,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "THIRD",
+    "SECOND"
+   ]
+  },
+  {
+   "race_id": "20261026-高知-06R",
+   "venue": "高知",
+   "gate": "WATCH_NEAR",
+   "status": "EXCLUDED",
+   "investment": 0,
+   "payout": null,
+   "trifecta_payout": null,
+   "primary_failure": null,
+   "missed_roles": []
+  },
+  {
+   "race_id": "20261026-高知-07R",
+   "venue": "高知",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 5950,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "THIRD"
+   ]
+  },
+  {
+   "race_id": "20261026-高知-08R",
+   "venue": "高知",
+   "gate": "PASS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 95970,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "SECOND"
+   ]
+  },
+  {
+   "race_id": "20261026-高知-09R",
+   "venue": "高知",
+   "gate": "CORE",
+   "status": "SETTLED",
+   "investment": 6000,
+   "payout": 0,
+   "trifecta_payout": 15040,
+   "primary_failure": "role",
+   "missed_roles": [
+    "SECOND"
+   ]
+  },
+  {
+   "race_id": "20261026-高知-10R",
+   "venue": "高知",
+   "gate": "WATCH_CHAOS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 25990,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "HEAD"
+   ]
+  },
+  {
+   "race_id": "20261026-高知-11R",
+   "venue": "高知",
+   "gate": "WATCH_CHAOS",
+   "status": "SETTLED",
+   "investment": 0,
+   "payout": 0,
+   "trifecta_payout": 5580,
+   "primary_failure": "selection",
+   "missed_roles": [
+    "SECOND"
+   ]
+  }
+ ]
+}

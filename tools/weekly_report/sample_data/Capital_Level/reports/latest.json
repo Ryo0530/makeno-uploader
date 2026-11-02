@@ -1,0 +1,18 @@
+{
+ "_synthetic": "テスト用の架空データ",
+ "generated_at": "2026-11-01T23:10:00+09:00",
+ "cohorts": [
+  {
+   "cohort": "JRA Set04 / CONTROL v1",
+   "level": "L0",
+   "decision": "HOLD",
+   "confidence": "LOW"
+  },
+  {
+   "cohort": "Local Set01 / CONTROL v0",
+   "level": "L0",
+   "decision": "HOLD",
+   "confidence": "LOW"
+  }
+ ]
+}
