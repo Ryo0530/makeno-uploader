@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>ロト6 予想システム 監査レポート</title>
+<style>
+.viz-root{color-scheme:light;--surface-1:#fcfcfb;--page:#f9f9f7;--text-primary:#0b0b0b;--text-secondary:#52514e;
+--muted:#898781;--grid:#e1e0d9;--axis:#c3c2b7;--series-1:#2a78d6;--series-2:#eb6834;--band:#f0efec;
+--pos:#e34948;--neg:#2a78d6;--border:rgba(11,11,11,.10)}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])) .viz-root{color-scheme:dark;--surface-1:#1a1a19;
+--page:#0d0d0d;--text-primary:#f0efec;--text-secondary:#c3c2b7;--grid:#2c2c2a;--axis:#383835;--series-1:#3987e5;
+--series-2:#d95926;--band:#2c2c2a;--pos:#e66767;--neg:#3987e5;--border:rgba(255,255,255,.10)}}
+:root[data-theme="dark"] .viz-root{color-scheme:dark;--surface-1:#1a1a19;--page:#0d0d0d;--text-primary:#f0efec;
+--text-secondary:#c3c2b7;--grid:#2c2c2a;--axis:#383835;--series-1:#3987e5;--series-2:#d95926;--band:#2c2c2a;
+--pos:#e66767;--neg:#3987e5;--border:rgba(255,255,255,.10)}
+*{box-sizing:border-box}
+body{margin:0}
+.viz-root{background:var(--page);color:var(--text-primary);font:15px/1.7 system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;min-height:100vh}
+main{max-width:820px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:26px;margin:0 0 4px} h2{font-size:19px;margin:40px 0 8px} h3{font-size:15px;margin:20px 0 6px}
+p,li{color:var(--text-secondary)} strong{color:var(--text-primary)}
+.sub{color:var(--muted);margin:0 0 24px}
+.card{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin:12px 0}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:12px 0}
+.tile{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:14px 16px}
+.tile .k{font-size:13px;color:var(--text-secondary)} .tile .v{font-size:28px;font-weight:600;color:var(--text-primary)}
+.tile .s{font-size:12px;color:var(--muted)}
+svg{width:100%;height:auto;display:block}
+svg text{font:12px system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif}
+.tick{fill:var(--muted);font-variant-numeric:tabular-nums} .label{fill:var(--text-secondary)}
+.grid{stroke:var(--grid);stroke-width:1} .axis{stroke:var(--axis);stroke-width:1}
+.ref{stroke:var(--text-secondary);stroke-width:1.5;stroke-dasharray:4 3}
+.band{fill:var(--band)}
+.bar{fill:var(--series-1)} .pos{fill:var(--pos)} .neg{fill:var(--neg)}
+.line2{fill:none;stroke:var(--series-2);stroke-width:2} .dot2{fill:var(--series-2);stroke:var(--surface-1);stroke-width:2}
+.ci{stroke:var(--series-1);stroke-width:2} .dot{fill:var(--series-1);stroke:var(--surface-1);stroke-width:2}
+.hitbox{fill:transparent} .hit:hover .bar,.hit:hover .pos,.hit:hover .neg{opacity:.75} .hit:hover .hitbox{fill:var(--grid);opacity:.4}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--text-secondary);margin:4px 0 8px}
+.sw{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:6px}
+.sw.line{height:3px;border-radius:2px;vertical-align:3px} .sw.dash{height:0;border-top:2px dashed var(--text-secondary);border-radius:0;vertical-align:3px}
+table{border-collapse:collapse;width:100%;font-size:14px;margin:8px 0}
+th,td{padding:6px 10px;border-bottom:1px solid var(--grid);text-align:left} th{color:var(--text-secondary);font-weight:600}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.ticket{font-variant-numeric:tabular-nums;letter-spacing:.04em;font-weight:600;color:var(--text-primary)}
+details{margin:8px 0} summary{cursor:pointer;color:var(--text-secondary)}
+.verdict{border-left:4px solid var(--series-1);padding:10px 14px;background:var(--surface-1);border-radius:0 8px 8px 0;margin:14px 0}
+#tip{position:fixed;pointer-events:none;background:var(--text-primary);color:var(--surface-1);padding:6px 10px;border-radius:6px;
+font-size:13px;max-width:320px;opacity:0;transition:opacity .08s;z-index:10}
+</style></head><body><div class="viz-root"><main>
+<h1>ロト6 予想システム 監査レポート</h1>
+<p class="sub">データ: 第1回〜第2157回 (2026-11-23) ・ 監査対象: 第2158回の予想</p>
+
+<div class="verdict"><strong>監査役の結論:</strong>
+検査項目はすべて合格しました。
+ただし、<strong>どの予想法も完全ランダムより当たるとは言えません</strong>。
+1口が1等に当たる確率は、どの予想法でも <strong>1/6,096,454</strong> です。</div>
+
+<h2>1. データ監査</h2>
+<table><thead><tr><th>検査項目</th><th>結果</th><th>詳細</th></tr></thead><tbody><tr><td>回号が1から欠番・重複なく連続している</td><td>✅ 合格</td><td>第1回〜第2157回</td></tr><tr><td>本数字6個+ボーナス1個が1〜43の異なる数字</td><td>✅ 合格</td><td>全回OK</td></tr><tr><td>抽せん日が古い順に並んでいる</td><td>✅ 合格</td><td>2000-10-05〜2026-11-23</td></tr><tr><td>抽せん日が月曜か木曜 (ロト6の抽せん曜日)</td><td>✅ 合格</td><td>全回 月・木</td></tr><tr><td>4等と5等の口数の比が確率の比に近い</td><td>✅ 合格</td><td>実際の中央値 0.063 / 理論 0.064</td></tr></tbody></table>
+
+<h2>2. リーク監査 (未来のデータの混入)</h2>
+<p>各予想法に「予想する回より前のデータ」だけを渡し、データファイルを直接読めない状態で動かしています。</p>
+<table><thead><tr><th>検査項目</th><th>結果</th><th>詳細</th></tr></thead><tbody><tr><td>予想ロジックが渡された過去データ以外を読まない</td><td>✅ 合格</td><td>全予想法OK</td></tr><tr><td>未来のデータを見た後も過去の回の予想が変わらない</td><td>✅ 合格</td><td>全予想法OK</td></tr><tr><td>買い目が1〜43の異なる6個 (昇順)</td><td>✅ 合格</td><td>全予想法OK</td></tr></tbody></table>
+
+<h2>3. 成績監査 (バックテスト)</h2>
+<p>第121回〜第2157回の2037回で、各予想法に毎回5口ずつ買わせました
+(その回より前のデータだけで予想)。比較の基準として、完全ランダムを200通りの乱数で同じように走らせ、
+「偶然でどこまで良い成績が出るか」を測っています。グレーの帯がその95%の範囲です。</p>
+<div class="card"><div class="legend"><span><span class="sw" style="background:var(--series-1)"></span>平均一致数 (1口あたり、本数字6個中)</span>
+<span><span class="sw" style="background:var(--band);border:1px solid var(--axis)"></span>完全ランダムの95%範囲</span><span><span class="sw dash"></span>理論値</span></div>
+<svg viewBox="0 0 760 364" role="img" aria-label="予想法ごとの平均一致数"><rect class="band" x="349.5" y="22" width="291.8" height="314"/><line class="ref" x1="488.9" x2="488.9" y1="18" y2="344"/><text class="label" x="488.9" y="14" text-anchor="middle">理論値 0.837</text><text class="tick" x="231.3" y="360" text-anchor="middle">0.81</text><text class="tick" x="326.0" y="360" text-anchor="middle">0.82</text><text class="tick" x="420.6" y="360" text-anchor="middle">0.83</text><text class="tick" x="515.3" y="360" text-anchor="middle">0.84</text><text class="tick" x="610.0" y="360" text-anchor="middle">0.85</text><text class="tick" x="704.6" y="360" text-anchor="middle">0.86</text><g class="hit" data-tip="完全ランダム (基準): 平均 0.8403個一致 / 5等以上 2.85% / 還元率 21.6%"><rect class="hitbox" x="0" y="30.0" width="760" height="34"/><text class="label" x="188" y="51.0" text-anchor="end">完全ランダム (基準)</text><circle class="dot" cx="517.7" cy="47.0" r="6"/></g><g class="hit" data-tip="ホット数字: 平均 0.8395個一致 / 5等以上 2.87% / 還元率 19.0%"><rect class="hitbox" x="0" y="64.0" width="760" height="34"/><text class="label" x="188" y="85.0" text-anchor="end">ホット数字</text><circle class="dot" cx="510.3" cy="81.0" r="6"/></g><g class="hit" data-tip="コールド数字: 平均 0.8398個一致 / 5等以上 2.65% / 還元率 19.4%"><rect class="hitbox" x="0" y="98.0" width="760" height="34"/><text class="label" x="188" y="119.0" text-anchor="end">コールド数字</text><circle class="dot" cx="513.1" cy="115.0" r="6"/></g><g class="hit" data-tip="出遅れ数字: 平均 0.8347個一致 / 5等以上 2.71% / 還元率 20.4%"><rect class="hitbox" x="0" y="132.0" width="760" height="34"/><text class="label" x="188" y="153.0" text-anchor="end">出遅れ数字</text><circle class="dot" cx="464.7" cy="149.0" r="6"/></g><g class="hit" data-tip="ベイズ出現率: 平均 0.8278個一致 / 5等以上 2.59% / 還元率 29.1%"><rect class="hitbox" x="0" y="166.0" width="760" height="34"/><text class="label" x="188" y="187.0" text-anchor="end">ベイズ出現率</text><circle class="dot" cx="399.7" cy="183.0" r="6"/></g><g class="hit" data-tip="マルコフ連鎖: 平均 0.8293個一致 / 5等以上 2.31% / 還元率 16.8%"><rect class="hitbox" x="0" y="200.0" width="760" height="34"/><text class="label" x="188" y="221.0" text-anchor="end">マルコフ連鎖</text><circle class="dot" cx="413.6" cy="217.0" r="6"/></g><g class="hit" data-tip="ペア共起: 平均 0.8167個一致 / 5等以上 2.58% / 還元率 17.5%"><rect class="hitbox" x="0" y="234.0" width="760" height="34"/><text class="label" x="188" y="255.0" text-anchor="end">ペア共起</text><circle class="dot" cx="294.7" cy="251.0" r="6"/></g><g class="hit" data-tip="アンサンブル: 平均 0.8202個一致 / 5等以上 2.79% / 還元率 17.4%"><rect class="hitbox" x="0" y="268.0" width="760" height="34"/><text class="label" x="188" y="289.0" text-anchor="end">アンサンブル</text><circle class="dot" cx="328.1" cy="285.0" r="6"/></g><g class="hit" data-tip="人とかぶりにくい: 平均 0.8417個一致 / 5等以上 2.67% / 還元率 127.1%"><rect class="hitbox" x="0" y="302.0" width="760" height="34"/><text class="label" x="188" y="323.0" text-anchor="end">人とかぶりにくい</text><circle class="dot" cx="531.7" cy="319.0" r="6"/></g></svg></div>
+<table><thead><tr><th>予想法</th><th class=num>平均一致数</th><th class=num>5等以上の当せん率</th><th class=num>還元率</th><th class=num>p値 → 多重検定補正後</th><th>判定</th></tr></thead><tbody><tr><td><strong>完全ランダム (基準)</strong><br><span style='font-size:12px'>クイックピックと同じ。他の予想法はこれに勝てるかで評価される</span></td><td class=num>0.8403</td><td class=num>2.85%</td><td class=num>21.6%</td><td class=num>—</td><td>基準</td></tr><tr><td><strong>ホット数字</strong><br><span style='font-size:12px'>直近50回でよく出ている数字を重視</span></td><td class=num>0.8395</td><td class=num>2.87%</td><td class=num>19.0%</td><td class=num>0.37 → 1.00</td><td>ランダムと差なし</td></tr><tr><td><strong>コールド数字</strong><br><span style='font-size:12px'>直近50回であまり出ていない数字を重視</span></td><td class=num>0.8398</td><td class=num>2.65%</td><td class=num>19.4%</td><td class=num>0.37 → 1.00</td><td>ランダムと差なし</td></tr><tr><td><strong>出遅れ数字</strong><br><span style='font-size:12px'>最後に出てから時間がたっている数字を重視</span></td><td class=num>0.8347</td><td class=num>2.71%</td><td class=num>20.4%</td><td class=num>0.61 → 1.00</td><td>ランダムと差なし</td></tr><tr><td><strong>ベイズ出現率</strong><br><span style='font-size:12px'>全期間の出現率をベイズ推定</span></td><td class=num>0.8278</td><td class=num>2.59%</td><td class=num>29.1%</td><td class=num>0.88 → 1.00</td><td>ランダムと差なし</td></tr><tr><td><strong>マルコフ連鎖</strong><br><span style='font-size:12px'>前回の番号の次の回に出やすかった数字を重視</span></td><td class=num>0.8293</td><td class=num>2.31%</td><td class=num>16.8%</td><td class=num>0.85 → 1.00</td><td>ランダムと差なし</td></tr><tr><td><strong>ペア共起</strong><br><span style='font-size:12px'>前回の番号と同じ回に出やすい数字を重視</span></td><td class=num>0.8167</td><td class=num>2.58%</td><td class=num>17.5%</td><td class=num>1.00 → 1.00</td><td>ランダムと差なし</td></tr><tr><td><strong>アンサンブル</strong><br><span style='font-size:12px'>上の5つのスコアを平均</span></td><td class=num>0.8202</td><td class=num>2.79%</td><td class=num>17.4%</td><td class=num>0.99 → 1.00</td><td>ランダムと差なし</td></tr><tr><td><strong>人とかぶりにくい</strong><br><span style='font-size:12px'>当たる確率は同じ。当たったときの山分けを減らす</span></td><td class=num>0.8417</td><td class=num>2.67%</td><td class=num>127.1%</td><td class=num>0.28 → 1.00</td><td>ランダムと差なし</td></tr></tbody></table>
+<p style="font-size:13px">理論値: 平均一致数 0.8372個 / 5等以上 2.72% ・
+p値 = 完全ランダム200回のうち、同じ以上の成績を出した割合。8つの予想法を同時に試しているので、Holm法で補正した値で判定しています (0.05未満なら有意)。
+還元率は実際の当せん金額で計算しているため、たまたま高額当せんがあると大きく動きます。</p>
+<details><summary>等級ごとの当せん口数</summary><table><thead><tr><th>予想法</th><th class=num>1等</th><th class=num>2等</th><th class=num>3等</th><th class=num>4等</th><th class=num>5等</th></tr></thead><tbody><tr><td>完全ランダム (基準)</td><td class=num>0</td><td class=num>0</td><td class=num>0</td><td class=num>18</td><td class=num>272</td></tr><tr><td>ホット数字</td><td class=num>0</td><td class=num>0</td><td class=num>0</td><td class=num>13</td><td class=num>279</td></tr><tr><td>コールド数字</td><td class=num>0</td><td class=num>0</td><td class=num>0</td><td class=num>18</td><td class=num>252</td></tr><tr><td>出遅れ数字</td><td class=num>0</td><td class=num>0</td><td class=num>0</td><td class=num>18</td><td class=num>258</td></tr><tr><td>ベイズ出現率</td><td class=num>0</td><td class=num>0</td><td class=num>1</td><td class=num>25</td><td class=num>238</td></tr><tr><td>マルコフ連鎖</td><td class=num>0</td><td class=num>0</td><td class=num>0</td><td class=num>14</td><td class=num>221</td></tr><tr><td>ペア共起</td><td class=num>0</td><td class=num>0</td><td class=num>0</td><td class=num>13</td><td class=num>250</td></tr><tr><td>アンサンブル</td><td class=num>0</td><td class=num>0</td><td class=num>0</td><td class=num>11</td><td class=num>273</td></tr><tr><td>人とかぶりにくい</td><td class=num>0</td><td class=num>0</td><td class=num>3</td><td class=num>24</td><td class=num>245</td></tr><tr><td><em>理論値 (期待される口数)</em></td><td class=num>0.00</td><td class=num>0.01</td><td class=num>0.36</td><td class=num>16.69</td><td class=num>259.62</td></tr></tbody></table></details>
+
+<h2>4. 確率監査</h2>
+<p>当せん確率を、組合せの数え上げで出した理論値と、200,000回の模擬抽せんの両方で確かめました。</p>
+<table><thead><tr><th>等級</th><th class=num>確率 (理論値)</th><th class=num>確率 (%)</th><th class=num>模擬抽せんでの割合</th><th class=num>ずれ (標準誤差の何倍か)</th><th>一致</th></tr></thead><tbody><tr><td>1等</td><td class=num>1/6,096,454</td><td class=num>0.0000164%</td><td class=num>0%</td><td class=num>-0.18</td><td>✅</td></tr><tr><td>2等</td><td class=num>1/1,016,076</td><td class=num>0.0000984%</td><td class=num>0%</td><td class=num>-0.44</td><td>✅</td></tr><tr><td>3等</td><td class=num>1/28,224</td><td class=num>0.00354%</td><td class=num>0.00500%</td><td class=num>+1.09</td><td>✅</td></tr><tr><td>4等</td><td class=num>1/610</td><td class=num>0.164%</td><td class=num>0.163%</td><td class=num>-0.10</td><td>✅</td></tr><tr><td>5等</td><td class=num>1/39</td><td class=num>2.55%</td><td class=num>2.59%</td><td class=num>+1.11</td><td>✅</td></tr></tbody></table>
+<div class="tiles">
+<div class="tile"><div class="k">5口のどれかが1等</div><div class="v">1/1,219,291</div><div class="s">口数に比例するだけ (厳密値)</div></div>
+<div class="tile"><div class="k">5口のどれかが5等以上</div><div class="v">12.7%</div><div class="s">模擬抽せん ・ 上限の目安 12.9%</div></div>
+<div class="tile"><div class="k">1口300円の期待値 (目安)</div><div class="v">95円</div><div class="s">直近100回の当せん金の中央値で計算</div></div>
+</div>
+
+<h2>5. 台帳監査 (事前予想の記録)</h2>
+<p><code>predict.py</code> を実行すると、全予想法の買い目が抽せん前に <code>data/ledger.csv</code> へ記録されます。
+各行は前の行のハッシュを含むので、後から1文字でも書き換えると検出されます。同じ回の予想は1回しか記録できません。</p>
+<table><thead><tr><th>検査項目</th><th>結果</th><th>詳細</th></tr></thead><tbody><tr><td>記録の改ざんがない (ハッシュチェーン)</td><td>✅ 合格</td><td>45行を検査</td></tr><tr><td>すべて抽せん前に記録されている</td><td>✅ 合格</td><td>OK</td></tr></tbody></table>
+<p>まだ結果の出た事前予想はありません。抽せん後に <code>update_data.py</code> → <code>auditor.py</code> を実行すると成績が出ます。</p>
+<p style='font-size:13px'>結果待ち: 第2158回</p>
+
+<h2>第2158回の買い目 (監査済み)</h2>
+<p>「人とかぶりにくい」予想法の5口です。上の確率監査はこの買い目で行っています。</p>
+<div class="card"><table><thead><tr><th>買い目</th></tr></thead><tbody><tr><td><span class="ticket">01 20 27 29 32 43</span></td></tr><tr><td><span class="ticket">16 20 26 33 35 41</span></td></tr><tr><td><span class="ticket">01 05 30 36 40 41</span></td></tr><tr><td><span class="ticket">05 20 31 34 37 42</span></td></tr><tr><td><span class="ticket">22 29 32 34 38 42</span></td></tr></tbody></table></div>
+</main><div id="tip" role="tooltip"></div></div><script>
+const tip=document.getElementById('tip');
+document.querySelectorAll('[data-tip]').forEach(el=>{
+  el.addEventListener('pointermove',e=>{tip.textContent=el.dataset.tip;tip.style.opacity=1;
+    const x=Math.min(e.clientX+14,innerWidth-tip.offsetWidth-8);tip.style.left=x+'px';tip.style.top=(e.clientY+14)+'px';});
+  el.addEventListener('pointerleave',()=>{tip.style.opacity=0;});
+});
+</script></body></html>

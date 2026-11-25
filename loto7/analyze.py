@@ -373,7 +373,9 @@ def build_report(draws):
     model = fit_popularity(draws)
     groups = popularity_groups(draws)
     past = {tuple(sorted(d.nums)) for d in draws}
-    tickets = generate(5, model, past, random.Random(draws[-1].round))
+    # 台帳に記録済みの「人とかぶりにくい」買い目があればそれを表示する (予想システムと同じ買い目)
+    from auditor import latest_tickets
+    tickets = latest_tickets(draws)
     rand_tickets = generate(5, model, past, random.Random(draws[-1].round), mode="random")
 
     first, last = draws[0], draws[-1]
